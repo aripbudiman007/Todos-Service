@@ -19,7 +19,7 @@
     ```
 3. **Setup Env Configuration:**
     ```
-    cp .env.example.env
+    cp .env.example .env
     ```
     Update the `.env` file with your preferred database credentials:
 
