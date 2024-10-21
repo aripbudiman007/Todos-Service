@@ -1,0 +1,64 @@
+### base_url
+@host=http://localhost:3000/api
+
+### access token
+@access_token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3Mjk1MDAxOTR9.K9VKFAn4Cqeju9jdWSB8KdlakdQtKF9Z5l9DKPwDoEk
+
+### Get All Todos
+GET {{host}}/todos HTTP/1.1
+access_token: {{access_token}}
+Content-Type: application/json
+
+### Get Single Todo
+GET {{host}}/todos/1 HTTP/1.1
+access_token: {{access_token}}
+Content-Type: application/json
+
+### Pagination
+GET {{host}}/todos?page=3&limit=10 HTTP/1.1
+access_token: {{access_token}}
+Content-Type: application/json
+
+### Create a New Todo
+POST {{host}}/todos HTTP/1.1
+access_token: {{access_token}}
+Content-Type: application/json
+
+{
+    "title": "Test",
+    "description": "Description"
+}
+
+### Update a New Todo
+PUT {{host}}/todos/1 HTTP/1.1
+access_token: {{access_token}}
+Content-Type: application/json
+
+{
+    "title": "Update Test",
+    "description": "Update Description"
+}
+
+### Delete a Todo
+DELETE {{host}}/todos/1 HTTP/1.1
+access_token: {{access_token}}
+Content-Type: application/json
+
+
+### Register Account
+POST {{host}}/auth/register HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "test@mail.com",
+    "password": "123456"
+}
+
+### Login Account
+POST {{host}}/auth/login HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "test@mail.com",
+    "password": "123456"
+}
